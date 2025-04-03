@@ -2,29 +2,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="studentBean" class="com.example.bean_creation.Student">
+    <bean id="studentOne" class="com.example.bean_creation.StudentOne">
+        <property name="studentOneName" value="Ravendra"/>
+        <property name="studentOneAge"  value="20"/>
+    </bean>
+    <bean id="student" class="com.example.bean_creation.Student">
         <property name="studentName" value="Puspendra"/>
-        <property name="age" value="22"/>
-        <property name="phoneNumber">
-            <list>
-                <value>7654321</value>
-                <value>3456789</value>
-                <value>8763219</value>
-            </list>
-        </property>
-        <property name="address">
-            <set>
-                <value>Bhopal</value>
-                <value>Jabalpur</value>
-                <value>Satna</value>
-            </set>
-        </property>
-        <property name="course">
-            <map>
-                <entry key="Hindi" value="3 months"/>
-                <entry key="English" value="2 months"/>
-                <entry key="Math" value="3 months"/>
-            </map>
+        <property name="studentAge" value="22"/>
+        <property name="obj">
+            <ref bean="studentOne"/>
         </property>
     </bean>
 </beans>
