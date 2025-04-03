@@ -2,15 +2,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="studentOne" class="com.example.bean_creation.StudentOne">
-        <property name="studentOneName" value="Ravendra"/>
-        <property name="studentOneAge"  value="20"/>
-    </bean>
     <bean id="student" class="com.example.bean_creation.Student">
-        <property name="studentName" value="Puspendra"/>
-        <property name="studentAge" value="22"/>
-        <property name="obj">
-            <ref bean="studentOne"/>
-        </property>
+        <constructor-arg value="Puspendra"/>
+        <constructor-arg value="22"/>
     </bean>
 </beans>
